@@ -6,28 +6,30 @@
 
 ## NOW
 - Public SSOT repo created
-- PM-Ops updates this board only
-- Evidence remains in private repo Issue/PR/Report only
+- A-System README / START HERE linked
+- B-System README / START HERE linked
+- R-System START HERE linked
+- R-System README update pending via PR #16
 
 ## NEXT
-- Pin Public SSOT link at top of A/B/R README
-- Pin Public SSOT link at top of A/B/R START HERE issue
-- Update checklist status daily
+- R-System PR #16 review/approval tracking
+- TODAY checklist status refresh
+- Evidence pointer numbers normalize
 
 ## STATUS
-- A-System: 🟡
-- B-System: 🟡
+- A-System: ✅
+- B-System: ✅
 - R-System: 🟡
 - PM-Ops: 🟡
 
 ## TODAY
-- [ ] Create HQ_DASHBOARD.md
-- [ ] Pin SSOT link in A-System README
-- [ ] Pin SSOT link in B-System README
+- [✔️] Create HQ_DASHBOARD.md
+- [✔️] Pin SSOT link in A-System README
+- [✔️] Pin SSOT link in B-System README
 - [ ] Pin SSOT link in R-System README
-- [ ] Pin SSOT link in A-System START HERE issue
-- [ ] Pin SSOT link in B-System START HERE issue
-- [ ] Pin SSOT link in R-System START HERE issue
+- [✔️] Pin SSOT link in A-System START HERE issue
+- [✔️] Pin SSOT link in B-System START HERE issue
+- [✔️] Pin SSOT link in R-System START HERE issue
 
 ## TOMORROW
 - [ ] Recheck NOW / NEXT / STATUS

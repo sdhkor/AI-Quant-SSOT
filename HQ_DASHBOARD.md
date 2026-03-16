@@ -5,31 +5,34 @@
 > Excluded: accounts, permissions, security details, sensitive policy, raw logs, DB, private links.
 
 ## NOW
-- Public SSOT repo created
+- Public SSOT repo / dashboard / update log 운영 중
 - A-System README / START HERE linked
 - B-System README / START HERE linked
-- R-System START HERE linked
-- R-System README update pending via PR #16
-
+- R-System README / START HERE linked
+- P1(Gate3a: SHADOW) 마감 증거 패키징 진행
+- P2 착수 준비: strong_set 입력 검증 이슈 생성 예정(관측/로그만)
+  
 ## NEXT
-- R-System PR #16 review/approval tracking
-- TODAY checklist status refresh
-- Evidence pointer numbers normalize
+- P1(Gate3a: SHADOW) 마감 증거를 Issue 1개로 정리
+- P2 준비용 strong_set 입력 검증 이슈 생성
+- TODAY 체크리스트 상태 갱신 및 Update Log 코멘트 기록
 
 ## STATUS
 - A-System: ✅
 - B-System: ✅
-- R-System: 🟡
+- R-System: ✅
 - PM-Ops: 🟡
 
 ## TODAY
-- [✔️] Create HQ_DASHBOARD.md
-- [✔️] Pin SSOT link in A-System README
-- [✔️] Pin SSOT link in B-System README
-- [ ] Pin SSOT link in R-System README
-- [✔️] Pin SSOT link in A-System START HERE issue
-- [✔️] Pin SSOT link in B-System START HERE issue
-- [✔️] Pin SSOT link in R-System START HERE issue
+- [x] Create HQ_DASHBOARD.md
+- [x] Pin SSOT link in A-System README
+- [x] Pin SSOT link in B-System README
+- [x] Pin SSOT link in R-System README
+- [x] Pin SSOT link in A-System START HERE issue
+- [x] Pin SSOT link in B-System START HERE issue
+- [x] Pin SSOT link in R-System START HERE issue
+- [ ] P1(Gate3a: SHADOW) 마감 증거 확보: **B 장중 갱신 1회 + A 장중 재로드 1회**(snapshot_age 회복) 로그/mtime 증거를 Issue 1개로 정리
+- [ ] P2 준비(센서 고정 원인): **strong_set 입력 검증 이슈 생성**(종목 수/샘플 출력, intraday 최신 timestamp, builder 필터 조건 점검) — 의미 변경 금지(관측/로그만)
 
 ## TOMORROW
 - [ ] Recheck NOW / NEXT / STATUS

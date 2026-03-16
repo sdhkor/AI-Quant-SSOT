@@ -3,6 +3,7 @@
 > Public SSOT for cross-system operations.
 > Scope: status summary, next actions, checklist, evidence pointers only.
 > Excluded: accounts, permissions, security details, sensitive policy, raw logs, DB, private links.
+> 공개 SSOT에는 민감정보/권한/원본로그/Private 링크를 기록하지 않는다. Evidence는 번호 포인터만 기록한다.
 > SSOT 체크박스 항목은 Evidence 포인터(A#ISSUE/PR, B#ISSUE/PR, R#ISSUE/PR) 없으면 완료로 인정하지 않음.
 
 ## NOW
@@ -19,9 +20,9 @@
 - 진행 중 항목: 포인터가 있으면 함께 표기
 - 포인터가 없으면 완료 표시 금지
 
-- P1(Gate3a: SHADOW) 마감 증거를 Issue 1개로 정리
-- P2 준비용 strong_set 입력 검증 이슈 생성
-- TODAY 체크리스트 상태 갱신 및 Update Log 코멘트 기록
+- [ ] P1(Gate3a: SHADOW) 마감 증거를 Issue 1개로 정리
+- [ ] P2 준비용 strong_set 입력 검증 이슈 생성
+- [ ] TODAY 체크리스트 상태 갱신 및 Update Log 코멘트 기록
 
 ## STATUS
 - A-System: ✅

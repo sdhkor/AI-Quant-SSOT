@@ -3,6 +3,7 @@
 > Public SSOT for cross-system operations.
 > Scope: status summary, next actions, checklist, evidence pointers only.
 > Excluded: accounts, permissions, security details, sensitive policy, raw logs, DB, private links.
+> SSOT 체크박스 항목은 Evidence 포인터(A#ISSUE/PR, B#ISSUE/PR, R#ISSUE/PR) 없으면 완료로 인정하지 않음.
 
 ## NOW
 - Public SSOT repo / dashboard / update log 운영 중
@@ -13,6 +14,11 @@
 - P2 착수 준비: strong_set 입력 검증 이슈 생성 예정(관측/로그만)
   
 ## NEXT
+원칙:
+- 완료 항목: 반드시 `(A#ISSUE-.. / B#ISSUE-.. / R#PR-..)` 포인터 포함
+- 진행 중 항목: 포인터가 있으면 함께 표기
+- 포인터가 없으면 완료 표시 금지
+
 - P1(Gate3a: SHADOW) 마감 증거를 Issue 1개로 정리
 - P2 준비용 strong_set 입력 검증 이슈 생성
 - TODAY 체크리스트 상태 갱신 및 Update Log 코멘트 기록
@@ -24,6 +30,11 @@
 - PM-Ops: 🟡
 
 ## TODAY
+원칙:
+- 완료 항목: 반드시 `(A#ISSUE-.. / B#ISSUE-.. / R#PR-..)` 포인터 포함
+- 진행 중 항목: 포인터가 있으면 함께 표기
+- 포인터가 없으면 완료 표시 금지
+  
 - [x] Create HQ_DASHBOARD.md
 - [x] Pin SSOT link in A-System README
 - [x] Pin SSOT link in B-System README

@@ -1,5 +1,3 @@
-# WORK_ORDER_260316.md
-
 # Work Order 260316 — SSOT ↔ Evidence 1:1
 
 RAW:

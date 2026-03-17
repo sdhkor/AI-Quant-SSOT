@@ -58,49 +58,78 @@ https://github.com/sdhkor/AI-Quant-SSOT/blob/main/COMMENT_RULES_v1_0.md
 
 ## A-System Dev
 
-> [A-System Dev]  
-> - 상태: 진행 / 완료 / 이슈 있음 / UNACK  
-> - 무엇: P1 관련 A-System 수행 내용 1~2줄  
-> - Evidence: A#ISSUE-xx  
-> - 리스크: 없으면 없음
+```
+[A-System Dev]
+- 상태: 진행 / 완료 / 이슈 있음 / UNACK
+- 무엇: P1 관련 A-System 수행 내용 1~2줄
+- Evidence: A#ISSUE-xx
+- 리스크: 없으면 없음
+```
 
 ## A-System Val
 
-> [A-System Val]  
-> - 상태: 진행 / 완료 / 이슈 있음 / UNACK  
-> - 무엇: A-System evidence 검증 상태 1~2줄  
-> - Evidence: A#ISSUE-xx  
-> - 리스크: 없으면 없음
+```
+[A-System Val]
+- 상태: 진행 / 완료 / 이슈 있음 / UNACK
+- 무엇: A-System evidence 검증 상태 1~2줄
+- Evidence: A#ISSUE-xx
+- 리스크: 없으면 없음
+```
 
 ## B-System Dev
 
-> [B-System Dev]  
-> - 상태: 진행 / 완료 / 이슈 있음 / UNACK  
-> - 무엇: P1 장중 갱신 / P2 strong_set 검증 관련 수행 내용 1~2줄  
-> - Evidence: B#ISSUE-xx, B#ISSUE-yy  
-> - 리스크: 없으면 없음
+```
+[B-System Dev]
+- 상태: 진행 / 완료 / 이슈 있음 / UNACK
+- 무엇: P1 장중 갱신 / P2 strong_set 검증 관련 수행 내용 1~2줄
+- Evidence: B#ISSUE-xx, B#ISSUE-yy
+- 리스크: 없으면 없음
+```
 
 ## B-System Val
 
-> [B-System Val]  
-> - 상태: 진행 / 완료 / 이슈 있음 / UNACK  
-> - 무엇: B-System P1/P2 evidence 검증 상태 1~2줄  
-> - Evidence: B#ISSUE-xx, B#ISSUE-yy  
-> - 리스크: 없으면 없음
+```
+[B-System Val]
+- 상태: 진행 / 완료 / 이슈 있음 / UNACK
+- 무엇: B-System P1/P2 evidence 검증 상태 1~2줄
+- Evidence: B#ISSUE-xx, B#ISSUE-yy
+- 리스크: 없으면 없음
+```
 
 ## R-System
 
-> [R-System]  
-> - 상태: 참고 / 해당 없음 / 이슈 있음 / UNACK  
-> - 무엇: 현 단계 직접 작업 없음 또는 관련 사항 1줄  
-> - Evidence: 필요 시 R#PR-xx 또는 R#ISSUE-xx  
-> - 리스크: 없으면 없음
+```
+[R-System]
+- 상태: 참고 / 해당 없음 / 이슈 있음 / UNACK
+- 무엇: 현 단계 직접 작업 없음 또는 관련 사항 1줄
+- Evidence: 필요 시 R#PR-xx 또는 R#ISSUE-xx
+- 리스크: 없으면 없음
+```
 
 ## PM-Ops 종합 댓글 형식
 
-> [PM-Ops --> HQ 종합 보고]  
-> - A-System: 상태 / 무엇 / Evidence  
-> - B-System: 상태 / 무엇 / Evidence  
-> - R-System: 상태 / 무엇 / Evidence  
-> - 종합: P1 / P2  
-> - 리스크: 없음 또는 1줄
+```
+[PM-Ops --> HQ 종합 보고]
+
+- A-System:
+  - 상태: [진행/완료/UNACK]
+  - 무엇: [요약]
+  - Evidence: [A#ISSUE-번호]
+
+- B-System:
+  - 상태: [진행/완료/UNACK]
+  - 무엇: [요약]
+  - Evidence: [B#ISSUE-번호]
+
+- R-System:
+  - 상태: [참고/해당 없음/UNACK]
+  - 무엇: [요약]
+  - Evidence: [필요 시 R#PR-번호]
+
+- 종합:
+  - P1: [진행/완료/보류]
+  - P2: [준비/진행/보류]
+
+- 리스크:
+  - [없음 또는 1줄]
+```

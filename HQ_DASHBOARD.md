@@ -46,6 +46,12 @@
 - [ ] P1(Gate3a: SHADOW) 마감 증거 확보: **B 장중 갱신 1회 + A 장중 재로드 1회**(snapshot_age 회복) 로그/mtime 증거를 Issue 1개로 정리
 - [ ] P2 준비(센서 고정 원인): **strong_set 입력 검증 이슈 생성**(종목 수/샘플 출력, intraday 최신 timestamp, builder 필터 조건 점검) — 의미 변경 금지(관측/로그만)
 
+## Receipt Status - 260317
+- [x] A-System Val 문서 수신 확인 (A#ISSUE-3)
+- [x] A-System Dev 문서 수신 확인 (A#ISSUE-3)
+- [x] B-System Dev 문서 수신 확인 (B#ISSUE-13)
+- [x] B-System Val 문서 수신 확인 (B#ISSUE-13)
+
 ## TOMORROW
 - [ ] Recheck NOW / NEXT / STATUS
 - [ ] Refresh evidence pointers

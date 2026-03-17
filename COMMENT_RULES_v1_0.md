@@ -111,5 +111,3 @@ https://github.com/sdhkor/AI-Quant-SSOT/blob/main/COMMENT_RULES_v1_0.md
 
 - 리스크:
   - [없음 또는 1줄]
-- 리스크:
-  - [없음 또는 1줄]

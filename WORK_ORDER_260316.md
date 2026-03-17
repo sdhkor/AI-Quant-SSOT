@@ -2,6 +2,16 @@
 
 # Work Order 260316 — SSOT ↔ Evidence 1:1
 
+RAW:
+https://raw.githubusercontent.com/sdhkor/AI-Quant-SSOT/refs/heads/main/WORK_ORDER_260316.md
+
+BROWSER:
+https://github.com/sdhkor/AI-Quant-SSOT/blob/main/WORK_ORDER_260316.md
+
+> Canonical doc (public raw .md)
+> Public에는 운영 현황/행동 요약/Evidence 번호 포인터만 기록한다.
+> 전략/정책 상세/원본 로그/권한/Private 링크는 기록하지 않는다.
+
 ## SSOT
 - Latest (raw): https://raw.githubusercontent.com/sdhkor/AI-Quant-SSOT/main/HQ_DASHBOARD.md
 - Browser: https://github.com/sdhkor/AI-Quant-SSOT/blob/main/HQ_DASHBOARD.md
@@ -115,5 +125,5 @@
 ---
 
 ## Reference
-- Roles Fixed: https://raw.githubusercontent.com/sdhkor/AI-Quant-SSOT/main/ROLES_FIXED_v1_0.md
-- Comment Rules: https://raw.githubusercontent.com/sdhkor/AI-Quant-SSOT/main/COMMENT_RULES_v1_0.md
+- Roles Fixed: https://raw.githubusercontent.com/sdhkor/AI-Quant-SSOT/refs/heads/main/ROLES_FIXED_v1_0.md
+- Comment Rules: https://raw.githubusercontent.com/sdhkor/AI-Quant-SSOT/refs/heads/main/COMMENT_RULES_v1_0.md

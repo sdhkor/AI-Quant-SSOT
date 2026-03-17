@@ -1,5 +1,15 @@
 # Roles Fixed v1.0 (Dev / Val / PM-Ops / HQ) — Constitution-level
 
+RAW:
+https://raw.githubusercontent.com/sdhkor/AI-Quant-SSOT/refs/heads/main/ROLES_FIXED_v1_0.md
+
+BROWSER:
+https://github.com/sdhkor/AI-Quant-SSOT/blob/main/ROLES_FIXED_v1_0.md
+
+> Canonical doc (public raw .md)
+> Public에는 운영 현황/행동 요약/Evidence 번호 포인터만 기록한다.
+> 전략/정책 상세/원본 로그/권한/Private 링크는 기록하지 않는다.
+
 목적:
 - Dev/Val 역할 모호성 제거
 - 산출물(Artifacts)로 역할을 강제: Dev=CHANGE, Val=VERDICT

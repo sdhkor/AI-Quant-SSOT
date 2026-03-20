@@ -11,14 +11,14 @@
 - Public SSOT repo / dashboard / update log 운영 중
 - A-System P1 intraday_1m main/opsafe: `FAIL / Fix needed`
 - Goal: find break point `(P1-A~D)` within 1 trading day
-- Strategy/profit discussion: `HOLD`
-- Ops rules/docs expansion: `FREEZE`
+- Strategy / profit discussion: `HOLD`
+- Ops rules / docs expansion: `FREEZE`
 
 ## NEXT
-- [ ] Dev Fix PR 생성 및 포인터 연결 `(A#PR-xx)`
-- [ ] Val Validation Issue 생성 및 포인터 연결 `(A#ISSUE-yy)`
-- [ ] P1-A~D 중 실제 단절 지점 확정 `(A#ISSUE-yy)`
-- [ ] TODAY / STATUS / Evidence pointer 갱신
+- [ ] Dev Fix PR 포인터 연결 `(A#PR-8)`
+- [ ] Val Validation Issue 포인터 연결 `(A#ISSUE-xx)`
+- [ ] P1-A~D 중 실제 단절 지점 확정 `(A#ISSUE-xx)`
+- [ ] TODAY / STATUS / Update Log 갱신
 
 ## STATUS
 - A-System: ⚠️ `FAIL / Fix needed`
@@ -27,19 +27,19 @@
 - PM-Ops: tracking / pointer update only
 
 ## TODAY
-- [ ] `P1 intraday_1m main/opsafe: FAIL / Fix needed` 반영
-- [ ] `Goal: find break point (P1-A~D)` 반영
-- [ ] Evidence pointer 갱신
-- [ ] Update log 코멘트 기록
+- [ ] Replace old Gate3a / P2 text with current P1 intraday status
+- [ ] Reflect `A#PR-8`
+- [ ] Add `A#ISSUE-xx` after Val issue opens
+- [ ] Keep `HOLD / FREEZE` status unchanged
+
+### Evidence Pointers
+- A-System: `A#PR-8`, `A#ISSUE-xx`
+- B-System:
+- R-System:
 
 ## LINKS
 ### Public SSOT
 - Dashboard: [HQ_DASHBOARD.md](./HQ_DASHBOARD.md)
-
-### Evidence Pointers
-- A-System: `A#PR-xx`, `A#ISSUE-yy`
-- B-System:
-- R-System:
 
 ## RULES
 ### Allowed

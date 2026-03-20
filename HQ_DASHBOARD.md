@@ -57,3 +57,6 @@
 - DB path/content
 - Private repo links
 - Credential / collaborator / ruleset related content
+
+## UPDATE LOG
+- 2026-03-20: Replaced outdated Gate3a/P2 wording with current A-System P1 intraday fail track. Evidence pointer: A#PR-8, A#ISSUE-xx

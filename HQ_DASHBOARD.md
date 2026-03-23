@@ -19,6 +19,8 @@
 - [ ] Val Validation Issue 포인터 연결 `(A#ISSUE-xx)`
 - [ ] P1-A~D 중 실제 단절 지점 확정 `(A#ISSUE-xx)`
 - [ ] TODAY / STATUS / Update Log 갱신
+- [ ] P1 intraday_1m FIX PR (event-driven 적재 이식) `(A#PR-xx)`
+- [ ] P1 검증(PASS/FAIL) 제출 `(A#ISSUE-yy)`
 
 ## STATUS
 - A-System: ⚠️ `FAIL / Fix needed`
@@ -31,6 +33,8 @@
 - [ ] Reflect `A#PR-8`
 - [ ] Add `A#ISSUE-xx` after Val issue opens
 - [ ] Keep `HOLD / FREEZE` status unchanged
+- [ ] P1 intraday_1m FIX PR (event-driven 적재 이식) `(A#PR-xx)`
+- [ ] P1 검증(PASS/FAIL) 제출 `(A#ISSUE-yy)`
 
 ### Evidence Pointers
 - A-System: `A#PR-8`, `A#ISSUE-xx`
@@ -60,3 +64,4 @@
 
 ## UPDATE LOG
 - 2026-03-20: Replaced outdated Gate3a/P2 wording with current A-System P1 intraday fail track. Evidence pointer: A#PR-8, A#ISSUE-xx
+- 2026-03-23: Added P1 intraday_1m FIX/validation pointer checklist to TODAY/NEXT per HQ instruction. Evidence-only update.

@@ -7,6 +7,25 @@
 > Evidence는 번호 포인터만 기록한다.
 > SSOT 체크박스 항목은 Evidence 포인터(A#ISSUE/PR, B#ISSUE/PR, R#ISSUE/PR) 없으면 완료로 인정하지 않음.
 
+## Operating Order (Constitution-level)
+1. **P1-D (snapshot freshness) 해결** → 데이터 진실성 복구
+2. **A 단독 성과 구조 1차 분석/조정** (거래 빈도 / 손익 분포 / 비용 구조)
+3. **P3 (감속 ENFORCE) 아주 약하게 적용** (예: cap=0.8 / 0.6)
+4. **그 다음에야 B/R 기여도 분석** (구간별 비교, 전후 비교)
+5. **마지막으로 정책 조정** (리스크 / 감속 강도)
+
+## B 운영 모드 (현재)
+- **단계 A (지금~P1/P2): ‘2회 단기 실행(오전/마감)’이 기본**
+  - 오전 10분 + 마감 10분 실행
+  - snapshot 최소 2개 생성 (변동성 / 입력 정상 여부 확인)
+  - 장중 A는 **읽기 전용**, 정책 영향 0
+
+## Architecture (권장)
+- **A만 Kiwoom OpenAPI를 직접 연결** (브로커 / 실시간 데이터 소유)
+- **B와 R은 A가 만든 데이터** (예: `intraday_1m.db` 또는 A snapshot)를 읽어 계산
+- 결과는 파일 / DB / 메시지로 **A가 읽음**
+- 구조: **B → A ← R** (단, Kiwoom 세션은 A 단일)
+
 ## NOW
 - Public SSOT repo / dashboard / update log 운영 중
 - A-System P1 intraday_1m main/opsafe: `FAIL / Fix needed`
@@ -15,26 +34,17 @@
 - Ops rules / docs expansion: `FREEZE`
 
 ## NEXT
-- [ ] Dev Fix PR 포인터 연결 `(A#PR-8)`
-- [ ] Val Validation Issue 포인터 연결 `(A#ISSUE-xx)`
-- [ ] P1-A~D 중 실제 단절 지점 확정 `(A#ISSUE-xx)`
-- [ ] TODAY / STATUS / Update Log 갱신
-- [ ] P1 intraday_1m FIX PR (event-driven 적재 이식) `(A#PR-xx)`
-- [ ] P1 검증(PASS/FAIL) 제출 `(A#ISSUE-yy)`
+- [ ] P1-D snapshot freshness FIX `(A#PR-xx)`
+- [ ] P1-D 재검증 판정 제출 `(A#ISSUE-yy)`
 
 ## STATUS
-- A-System: ⚠️ `FAIL / Fix needed`
-- B-System: HOLD
-- R-System: HOLD
-- PM-Ops: tracking / pointer update only
+- intraday_1m DB write path: `PASS 수준`
+- snapshot freshness: `FAIL`
+- overall: `HOLD`
 
 ## TODAY
-- [ ] Replace old Gate3a / P2 text with current P1 intraday status
-- [ ] Reflect `A#PR-8`
-- [ ] Add `A#ISSUE-xx` after Val issue opens
-- [ ] Keep `HOLD / FREEZE` status unchanged
-- [ ] P1 intraday_1m FIX PR (event-driven 적재 이식) `(A#PR-xx)`
-- [ ] P1 검증(PASS/FAIL) 제출 `(A#ISSUE-yy)`
+- [ ] P1-D snapshot freshness FIX `(A#PR-xx)`
+- [ ] P1-D 재검증 판정 제출 `(A#ISSUE-yy)`
 
 ### Evidence Pointers
 - A-System: `A#PR-8`, `A#ISSUE-xx`
@@ -65,3 +75,4 @@
 ## UPDATE LOG
 - 2026-03-20: Replaced outdated Gate3a/P2 wording with current A-System P1 intraday fail track. Evidence pointer: A#PR-8, A#ISSUE-xx
 - 2026-03-23: Added P1 intraday_1m FIX/validation pointer checklist to TODAY/NEXT per HQ instruction. Evidence-only update.
+- 2026-03-24: Added constitution-level Operating Order, current B operating mode (Stage A), and recommended architecture to HQ_DASHBOARD. Kept split status and evidence-pointer-only policy.

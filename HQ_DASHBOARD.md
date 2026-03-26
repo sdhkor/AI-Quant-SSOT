@@ -30,6 +30,10 @@
   - 오전: 장 시작 후 약 10분 실행
   - 마감: 장 마감 전/직후 약 10분 실행
   - 장중 A는 읽기 전용(SHADOW), 정책 영향 0
+- B 운영: `1일 2회(오전/마감)`
+- P1-D freshness: `window-based 판정`
+- overall: `HOLD`
+- TODAY/NEXT: `오전 창 검증`, `마감 창 검증` 포인터만 유지
 
 ## Architecture (권장)
 - **A만 Kiwoom OpenAPI를 직접 연결** (브로커 / 실시간 데이터 소유)
@@ -88,3 +92,4 @@
 - 2026-03-23: Added P1 intraday_1m FIX/validation pointer checklist to TODAY/NEXT per HQ instruction. Evidence-only update.
 - 2026-03-24: Added constitution-level Operating Order, current B operating mode (Stage A), and recommended architecture to HQ_DASHBOARD. Kept split status and evidence-pointer-only policy.
 - 2026-03-25: Fixed SSOT wording to B daily-two-run mode and P1-D snapshot freshness window-based validation. Evidence-pointer-only update.
+- 2026-03-26: Fixed SSOT to B daily-two-run mode and P1-D window-based validation. Kept evidence-pointer-only policy and split status.

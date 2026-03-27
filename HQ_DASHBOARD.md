@@ -99,3 +99,4 @@
 - 2026-03-26: Fixed SSOT to B daily-two-run mode and P1-D window-based validation. Kept evidence-pointer-only policy and split status.
 SSOT Update Log 1줄
 - 2026-03-27: P1-D PASS close, move to A performance analysis track.
+- 2026-03-27: Added B-L2(OBS-only) v0.1 schema/sample and structure-validation checklist to SSOT with evidence pointers only.

@@ -53,6 +53,9 @@
 - [ ] A 성과 구조 기반 “최소 조정안” 제안(HQ 판단용) `(A#ISSUE-yy)`
 - [ ] B-L2(OBS-only) v0.1 스키마/샘플 제출 `(B#PR-xx 또는 B#ISSUE-yy)`
 - [ ] B-L2(OBS-only) 구조 검증 판정(Val) `(B#ISSUE-zz)`
+- [ ] Entry Cap PR 적용 `(A#PR-xx)`
+- [ ] Entry Cap 1~3일 효과 리포트(Val) `(A#ISSUE-yy)`
+- [ ] Ops Incident 재발방지(원칙 3개) 박제 `(A#ISSUE-zz)`
 
 ## STATUS
 - intraday_1m DB write path: `PASS 수준`
@@ -64,6 +67,9 @@
 - [ ] A 성과 구조 기반 “최소 조정안” 제안(HQ 판단용) `(A#ISSUE-yy)`
 - [ ] B-L2(OBS-only) v0.1 스키마/샘플 제출 `(B#PR-xx 또는 B#ISSUE-yy)`
 - [ ] B-L2(OBS-only) 구조 검증 판정(Val) `(B#ISSUE-zz)`
+- [ ] Entry Cap PR 적용 `(A#PR-xx)`
+- [ ] Entry Cap 1~3일 효과 리포트(Val) `(A#ISSUE-yy)`
+- [ ] Ops Incident 재발방지(원칙 3개) 박제 `(A#ISSUE-zz)`
 
 ### Evidence Pointers
 - A-System: `A#ISSUE-xx`, `A#ISSUE-yy`
@@ -100,3 +106,4 @@
 SSOT Update Log 1줄
 - 2026-03-27: P1-D PASS close, move to A performance analysis track.
 - 2026-03-27: Added B-L2(OBS-only) v0.1 schema/sample and structure-validation checklist to SSOT with evidence pointers only.
+- 2026-03-28: Added Entry Cap experiment tracking and Ops Incident recurrence-prevention pointers to SSOT.

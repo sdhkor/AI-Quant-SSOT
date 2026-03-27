@@ -24,6 +24,7 @@
   - A가 최신 snapshot을 다시 읽음 (`snapshot_ts` 재갱신)
   - `snapshot_age_sec` 정상 범위 회복
 - 두 창 사이 시간대의 age 증가 / stale 진입은 운영모드상 허용
+- P1-D(window-based): ✅ DONE `(A#ISSUE-pass)`
 
 ## B 운영 모드 (현재)
 - **1일 2회 단기 실행(오전/마감) 유지**

@@ -49,17 +49,21 @@
 - Ops rules / docs expansion: `FREEZE`
 
 ## NEXT
-- [ ] P1-D window-based 최종 판정 정리 `(A#ISSUE-yy)`
-- [ ] PASS 시 A 단독 성과 구조 1차 분석/조정 트랙 이동 포인터 반영 `(A#ISSUE-zz)`
+- [✔️] P1-D window-based 최종 판정 정리 `(A#ISSUE-yy)`
+- [✔️] PASS 시 A 단독 성과 구조 1차 분석/조정 트랙 이동 포인터 반영 `(A#ISSUE-zz)`
+- [ ] A 단독 성과 구조 1차 분석 리포트(Val) `(A#ISSUE-xx)`
+- [ ] A 성과 구조 기반 “최소 조정안” 제안(HQ 판단용) `(A#ISSUE-yy)`
 
 ## STATUS
 - intraday_1m DB write path: `PASS 수준`
-- snapshot freshness: `window-based 판정`
-- overall: `HOLD`
+- P1-D snapshot freshness (window-based): `DONE`
+- overall: `PASS`
 
 ## TODAY
-- [ ] 오전 창 P1-D window-based 검증 제출 `(A#ISSUE-xx)`
-- [ ] 마감 창 P1-D window-based 검증 제출 `(A#ISSUE-yy)`
+- [✔️] 오전 창 P1-D window-based 검증 제출 `(A#ISSUE-xx)`
+- [✔️] 마감 창 P1-D window-based 검증 제출 `(A#ISSUE-yy)`
+- [ ] A 단독 성과 구조 1차 분석 리포트(Val) `(A#ISSUE-xx)`
+- [ ] A 성과 구조 기반 “최소 조정안” 제안(HQ 판단용) `(A#ISSUE-yy)`
 
 ### Evidence Pointers
 - A-System: `A#ISSUE-xx`, `A#ISSUE-yy`
@@ -93,3 +97,5 @@
 - 2026-03-24: Added constitution-level Operating Order, current B operating mode (Stage A), and recommended architecture to HQ_DASHBOARD. Kept split status and evidence-pointer-only policy.
 - 2026-03-25: Fixed SSOT wording to B daily-two-run mode and P1-D snapshot freshness window-based validation. Evidence-pointer-only update.
 - 2026-03-26: Fixed SSOT to B daily-two-run mode and P1-D window-based validation. Kept evidence-pointer-only policy and split status.
+SSOT Update Log 1줄
+- 2026-03-27: P1-D PASS close, move to A performance analysis track.

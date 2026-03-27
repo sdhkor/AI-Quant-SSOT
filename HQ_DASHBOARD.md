@@ -51,6 +51,8 @@
 ## NEXT
 - [ ] A 단독 성과 구조 1차 분석 리포트(Val) `(A#ISSUE-xx)`
 - [ ] A 성과 구조 기반 “최소 조정안” 제안(HQ 판단용) `(A#ISSUE-yy)`
+- [ ] B-L2(OBS-only) v0.1 스키마/샘플 제출 `(B#PR-xx 또는 B#ISSUE-yy)`
+- [ ] B-L2(OBS-only) 구조 검증 판정(Val) `(B#ISSUE-zz)`
 
 ## STATUS
 - intraday_1m DB write path: `PASS 수준`
@@ -60,6 +62,8 @@
 ## TODAY
 - [ ] A 단독 성과 구조 1차 분석 리포트(Val) `(A#ISSUE-xx)`
 - [ ] A 성과 구조 기반 “최소 조정안” 제안(HQ 판단용) `(A#ISSUE-yy)`
+- [ ] B-L2(OBS-only) v0.1 스키마/샘플 제출 `(B#PR-xx 또는 B#ISSUE-yy)`
+- [ ] B-L2(OBS-only) 구조 검증 판정(Val) `(B#ISSUE-zz)`
 
 ### Evidence Pointers
 - A-System: `A#ISSUE-xx`, `A#ISSUE-yy`

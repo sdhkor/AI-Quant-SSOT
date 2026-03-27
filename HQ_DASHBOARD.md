@@ -43,15 +43,12 @@
 - 구조: **B → A ← R** (단, Kiwoom 세션은 A 단일)
 
 ## NOW
-- Public SSOT repo / dashboard / update log 운영 중
-- A-System P1 intraday_1m main/opsafe: `FAIL / Fix needed`
-- Goal: find break point `(P1-A~D)` within 1 trading day
-- Strategy / profit discussion: `HOLD`
-- Ops rules / docs expansion: `FREEZE`
+- B 운영: `1일 2회(오전/마감)` baseline 유지
+- P1-D(window-based): `DONE`
+- Next track: `A 단독 성과 구조 1차 분석/조정`
+- Strategy / policy change: `HOLD until analysis`
 
 ## NEXT
-- [✔️] P1-D window-based 최종 판정 정리 `(A#ISSUE-yy)`
-- [✔️] PASS 시 A 단독 성과 구조 1차 분석/조정 트랙 이동 포인터 반영 `(A#ISSUE-zz)`
 - [ ] A 단독 성과 구조 1차 분석 리포트(Val) `(A#ISSUE-xx)`
 - [ ] A 성과 구조 기반 “최소 조정안” 제안(HQ 판단용) `(A#ISSUE-yy)`
 
@@ -61,8 +58,6 @@
 - overall: `PASS`
 
 ## TODAY
-- [✔️] 오전 창 P1-D window-based 검증 제출 `(A#ISSUE-xx)`
-- [✔️] 마감 창 P1-D window-based 검증 제출 `(A#ISSUE-yy)`
 - [ ] A 단독 성과 구조 1차 분석 리포트(Val) `(A#ISSUE-xx)`
 - [ ] A 성과 구조 기반 “최소 조정안” 제안(HQ 판단용) `(A#ISSUE-yy)`
 

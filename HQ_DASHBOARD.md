@@ -48,6 +48,13 @@
 - Next track: `A 단독 성과 구조 1차 분석/조정`
 - Strategy / policy change: `HOLD until analysis`
 
+## STATUS
+- intraday_1m DB write path: `PASS 수준`
+- P1-D snapshot freshness (window-based): `DONE`
+- overall: `PASS`
+- B-L2 Dual Engine OBS-only v0.1 runtime: `PASS`
+- A 적용 / R 승격 / 행동 정책 연결: `보류 유지`
+
 ## TODAY
 - [ ] A 단독 성과 구조 1차 분석 리포트(Val) `(A#ISSUE-xx)`
 - [ ] A 성과 구조 기반 “최소 조정안” 제안(HQ 판단용) `(A#ISSUE-yy)`
@@ -60,6 +67,8 @@
 - [ ] A-System 적용 검토 보류 유지
 - [ ] R-System 승격 검토 보류 유지
 - [ ] AM/EOD 시간 분리 샘플 1세트 추가 확보 권고
+- [ ] B-L2 v0.1 PASS `(B#ISSUE-xx)`
+- [ ] B-L2 time-separated AM/EOD evidence pending `(B#ISSUE-yy)`
 
 ## NEXT
 - [ ] A 단독 성과 구조 1차 분석 리포트(Val) `(A#ISSUE-xx)`
@@ -69,11 +78,8 @@
 - [ ] A Entry Cap PR 적용 `(A#PR-xx)`
 - [ ] A Entry Cap 1~3일 효과 리포트(Val) `(A#ISSUE-yy)`
 - [ ] Ops Incident 재발방지(원칙 3개) 박제 `(A#ISSUE-zz)`
-
-## STATUS
-- intraday_1m DB write path: `PASS 수준`
-- P1-D snapshot freshness (window-based): `DONE`
-- overall: `PASS`
+- [ ] B-L2 v0.1 PASS `(B#ISSUE-xx)`
+- [ ] B-L2 time-separated AM/EOD evidence pending `(B#ISSUE-yy)`
 
 ### Evidence Pointers
 - A-System: `A#ISSUE-xx`, `A#ISSUE-yy`
@@ -111,3 +117,4 @@ SSOT Update Log 1줄
 - 2026-03-27: P1-D PASS close, move to A performance analysis track.
 - 2026-03-27: Added B-L2(OBS-only) v0.1 schema/sample and structure-validation checklist to SSOT with evidence pointers only.
 - 2026-03-28: Added Entry Cap experiment tracking and Ops Incident recurrence-prevention pointers to SSOT.
+- 2026-03-28: Added B-L2 OBS-only runtime PASS pointer and AM/EOD time-separated evidence pending pointer to SSOT.

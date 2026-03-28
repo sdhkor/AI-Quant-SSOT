@@ -56,6 +56,10 @@
 - [ ] A Entry Cap PR 적용 `(A#PR-xx)`
 - [ ] A Entry Cap 1~3일 효과 리포트(Val) `(A#ISSUE-yy)`
 - [ ] Ops Incident 재발방지(원칙 3개) 박제 `(A#ISSUE-zz)`
+- [x] B-L2 Dual Engine OBS-only v0.1 runtime PASS `(B#ISSUE-14 / B#PR-15)`
+- [ ] A-System 적용 검토 보류 유지
+- [ ] R-System 승격 검토 보류 유지
+- [ ] AM/EOD 시간 분리 샘플 1세트 추가 확보 권고
 
 ## NEXT
 - [ ] A 단독 성과 구조 1차 분석 리포트(Val) `(A#ISSUE-xx)`

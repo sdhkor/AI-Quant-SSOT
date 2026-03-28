@@ -14,27 +14,11 @@
 4. **그 다음에야 B/R 기여도 분석** (구간별 비교, 전후 비교)
 5. **마지막으로 정책 조정** (리스크 / 감속 강도)
 
-## P1-D 판정 기준 (고정)
-- **snapshot freshness는 연속 freshness가 아니라 window-based로 판정**
-- 오전 창(B 실행 직후):
-  - A가 최신 snapshot을 읽음 (`snapshot_ts` 당일 갱신)
-  - `snapshot_age_sec` 정상 범위 회복
-  - 창 직후 stale 지속/반복 시 FAIL
-- 마감 창(B 실행 직후):
-  - A가 최신 snapshot을 다시 읽음 (`snapshot_ts` 재갱신)
-  - `snapshot_age_sec` 정상 범위 회복
-- 두 창 사이 시간대의 age 증가 / stale 진입은 운영모드상 허용
-- P1-D(window-based): ✅ DONE `(A#ISSUE-pass)`
-
 ## B 운영 모드 (현재)
 - **1일 2회 단기 실행(오전/마감) 유지**
   - 오전: 장 시작 후 약 10분 실행
   - 마감: 장 마감 전/직후 약 10분 실행
-  - 장중 A는 읽기 전용(SHADOW), 정책 영향 0
-- B 운영: `1일 2회(오전/마감)`
-- P1-D freshness: `window-based 판정`
-- overall: `HOLD`
-- TODAY/NEXT: `오전 창 검증`, `마감 창 검증` 포인터만 유지
+  - 장중 A는 **읽기 전용(SHADOW)**, 정책 영향 0
 
 ## Architecture (권장)
 - **A만 Kiwoom OpenAPI를 직접 연결** (브로커 / 실시간 데이터 소유)
@@ -43,59 +27,76 @@
 - 구조: **B → A ← R** (단, Kiwoom 세션은 A 단일)
 
 ## NOW
-- B 운영: `1일 2회(오전/마감)` baseline 유지
-- P1-D(window-based): `DONE`
-- Next track: `A 단독 성과 구조 1차 분석/조정`
-- Strategy / policy change: `HOLD until analysis`
+- Public SSOT repo / dashboard / update log 운영 중
+- A-System README / START HERE linked
+- B-System README / START HERE linked
+- R-System README / START HERE linked
+- B 운영 baseline: `1일 2회(오전/마감)`
+- P1-D snapshot freshness (window-based): `DONE`
+- Current A track: `Entry Cap (#1: daily entry cap=20) experiment`
+- Ops Incident: `separated / minimal recurrence-prevention principles fixed`
+- B-L2 Dual Engine OBS-only v0.1 runtime: `PASS`
+- A 적용 / R 승격 / 행동 정책 연결: `보류 유지`
+
+## NEXT
+원칙:
+- 완료 항목: 반드시 Evidence 포인터 포함
+- 진행 중 항목: 포인터가 있으면 함께 표기
+- 포인터가 없으면 완료 표시 금지
+
+- [ ] A Entry Cap PR 적용 `(A#PR-xx)`
+- [ ] A Entry Cap 1~3일 효과 리포트(Val) `(A#ISSUE-yy)`
+- [ ] Ops Incident 재발방지(원칙 3개) 박제 `(A#ISSUE-zz)`
+- [ ] B-L2 OBS-only runtime PASS `(B#ISSUE-14 / B#PR-15)`
+- [ ] B-L2 time-separated AM/EOD evidence pending `(B#ISSUE-aa)`
 
 ## STATUS
 - intraday_1m DB write path: `PASS 수준`
 - P1-D snapshot freshness (window-based): `DONE`
-- overall: `PASS`
-- B-L2 Dual Engine OBS-only v0.1 runtime: `PASS`
+- A Entry Cap experiment: `IN PROGRESS`
+- Ops Incident handling: `SEPARATED`
+- B-L2 OBS-only runtime: `PASS`
 - A 적용 / R 승격 / 행동 정책 연결: `보류 유지`
+- overall: `IN PROGRESS`
 
 ## TODAY
-- [ ] A 단독 성과 구조 1차 분석 리포트(Val) `(A#ISSUE-xx)`
-- [ ] A 성과 구조 기반 “최소 조정안” 제안(HQ 판단용) `(A#ISSUE-yy)`
-- [ ] B-L2(OBS-only) v0.1 스키마/샘플 제출 `(B#PR-xx 또는 B#ISSUE-yy)`
-- [ ] B-L2(OBS-only) 구조 검증 판정(Val) `(B#ISSUE-zz)`
+원칙:
+- 완료 항목: 반드시 Evidence 포인터 포함
+- 진행 중 항목: 포인터가 있으면 함께 표기
+- 포인터가 없으면 완료 표시 금지
+
 - [ ] A Entry Cap PR 적용 `(A#PR-xx)`
 - [ ] A Entry Cap 1~3일 효과 리포트(Val) `(A#ISSUE-yy)`
 - [ ] Ops Incident 재발방지(원칙 3개) 박제 `(A#ISSUE-zz)`
-- [x] B-L2 Dual Engine OBS-only v0.1 runtime PASS `(B#ISSUE-14 / B#PR-15)`
-- [ ] A-System 적용 검토 보류 유지
-- [ ] R-System 승격 검토 보류 유지
-- [ ] AM/EOD 시간 분리 샘플 1세트 추가 확보 권고
-- [ ] B-L2 v0.1 PASS `(B#ISSUE-xx)`
-- [ ] B-L2 time-separated AM/EOD evidence pending `(B#ISSUE-yy)`
+- [ ] B-L2 OBS-only runtime PASS `(B#ISSUE-14 / B#PR-15)`
+- [ ] B-L2 time-separated AM/EOD evidence pending `(B#ISSUE-aa)`
 
-## NEXT
-- [ ] A 단독 성과 구조 1차 분석 리포트(Val) `(A#ISSUE-xx)`
-- [ ] A 성과 구조 기반 “최소 조정안” 제안(HQ 판단용) `(A#ISSUE-yy)`
-- [ ] B-L2(OBS-only) v0.1 스키마/샘플 제출 `(B#PR-xx 또는 B#ISSUE-yy)`
-- [ ] B-L2(OBS-only) 구조 검증 판정(Val) `(B#ISSUE-zz)`
-- [ ] A Entry Cap PR 적용 `(A#PR-xx)`
-- [ ] A Entry Cap 1~3일 효과 리포트(Val) `(A#ISSUE-yy)`
-- [ ] Ops Incident 재발방지(원칙 3개) 박제 `(A#ISSUE-zz)`
-- [ ] B-L2 v0.1 PASS `(B#ISSUE-xx)`
-- [ ] B-L2 time-separated AM/EOD evidence pending `(B#ISSUE-yy)`
-
-### Evidence Pointers
-- A-System: `A#ISSUE-xx`, `A#ISSUE-yy`
-- B-System:
-- R-System:
+## TOMORROW
+- [ ] Recheck NOW / NEXT / STATUS
+- [ ] Refresh evidence pointers
+- [ ] Close or carry over unfinished checklist items
 
 ## LINKS
 ### Public SSOT
 - Dashboard: [HQ_DASHBOARD.md](./HQ_DASHBOARD.md)
 
+### Evidence Pointers
+- A-System: `A#PR-xx`, `A#ISSUE-yy`, `A#ISSUE-zz`
+- B-System: `B#ISSUE-14`, `B#PR-15`, `B#ISSUE-aa`
+- R-System:
+
+## UPDATE LOG
+- 2026-03-27: P1-D PASS close, move to A performance analysis track.
+- 2026-03-28: Added Entry Cap experiment tracking and Ops Incident recurrence-prevention pointers to SSOT.
+- 2026-03-28: Added B-L2 OBS-only runtime PASS pointer and AM/EOD time-separated evidence pending pointer to SSOT.
+
 ## RULES
 ### Allowed
 - Status summary
-- Today / Next checklist
-- System status
+- Today / Tomorrow checklist
+- System status (✅ / 🟡 / ⛔ or PASS / HOLD / DONE)
 - Evidence pointer numbers only
+- Example: `A#PR-12`, `B#ISSUE-7`, `R#PR-3`
 
 ### Forbidden
 - Account information
@@ -106,6 +107,7 @@
 - DB path/content
 - Private repo links
 - Credential / collaborator / ruleset related content
+
 
 ## UPDATE LOG
 - 2026-03-20: Replaced outdated Gate3a/P2 wording with current A-System P1 intraday fail track. Evidence pointer: A#PR-8, A#ISSUE-xx

@@ -27,15 +27,12 @@
 - 구조: **B → A ← R** (단, Kiwoom 세션은 A 단일)
 
 ## NOW
-- Public SSOT repo / dashboard / update log 운영 중
-- A-System README / START HERE linked
-- B-System README / START HERE linked
-- R-System README / START HERE linked
-- B 운영 baseline: `1일 2회(오전/마감)`
+- B 운영: `1일 2회(오전/마감)` baseline 유지
 - P1-D snapshot freshness (window-based): `DONE`
 - Current A track: `Entry Cap (#1: daily entry cap=20) experiment`
 - Ops Incident: `separated / minimal recurrence-prevention principles fixed`
 - B-L2 Dual Engine OBS-only v0.1 runtime: `PASS`
+- B-L2 time-separated AM/EOD evidence: `completed`
 - A 적용 / R 승격 / 행동 정책 연결: `보류 유지`
 
 ## NEXT
@@ -43,12 +40,9 @@
 - 완료 항목: 반드시 Evidence 포인터 포함
 - 진행 중 항목: 포인터가 있으면 함께 표기
 - 포인터가 없으면 완료 표시 금지
-
 - [ ] A Entry Cap PR 적용 `(A#PR-xx)`
 - [ ] A Entry Cap 1~3일 효과 리포트(Val) `(A#ISSUE-yy)`
 - [ ] Ops Incident 재발방지(원칙 3개) 박제 `(A#ISSUE-zz)`
-- [ ] B-L2 OBS-only runtime PASS `(B#ISSUE-14 / B#PR-15)`
-- [ ] B-L2 time-separated AM/EOD evidence pending `(B#ISSUE-aa)`
 
 ## STATUS
 - intraday_1m DB write path: `PASS 수준`
@@ -56,7 +50,6 @@
 - A Entry Cap experiment: `IN PROGRESS`
 - Ops Incident handling: `SEPARATED`
 - B-L2 OBS-only runtime: `PASS`
-- A 적용 / R 승격 / 행동 정책 연결: `보류 유지`
 - overall: `IN PROGRESS`
 
 ## TODAY
@@ -64,12 +57,9 @@
 - 완료 항목: 반드시 Evidence 포인터 포함
 - 진행 중 항목: 포인터가 있으면 함께 표기
 - 포인터가 없으면 완료 표시 금지
-
 - [ ] A Entry Cap PR 적용 `(A#PR-xx)`
 - [ ] A Entry Cap 1~3일 효과 리포트(Val) `(A#ISSUE-yy)`
 - [ ] Ops Incident 재발방지(원칙 3개) 박제 `(A#ISSUE-zz)`
-- [ ] B-L2 OBS-only runtime PASS `(B#ISSUE-14 / B#PR-15)`
-- [ ] B-L2 time-separated AM/EOD evidence pending `(B#ISSUE-aa)`
 
 ## TOMORROW
 - [ ] Recheck NOW / NEXT / STATUS
@@ -82,7 +72,7 @@
 
 ### Evidence Pointers
 - A-System: `A#PR-xx`, `A#ISSUE-yy`, `A#ISSUE-zz`
-- B-System: `B#ISSUE-14`, `B#PR-15`, `B#ISSUE-aa`
+- B-System: `B#ISSUE-14`, `B#PR-15`
 - R-System:
 
 ## UPDATE LOG
@@ -120,3 +110,4 @@ SSOT Update Log 1줄
 - 2026-03-27: Added B-L2(OBS-only) v0.1 schema/sample and structure-validation checklist to SSOT with evidence pointers only.
 - 2026-03-28: Added Entry Cap experiment tracking and Ops Incident recurrence-prevention pointers to SSOT.
 - 2026-03-28: Added B-L2 OBS-only runtime PASS pointer and AM/EOD time-separated evidence pending pointer to SSOT.
+- 2026-03-30: Recorded B-L2 OBS-only runtime PASS and time-separated AM/EOD evidence completed. A/R escalation remains on hold.

@@ -75,11 +75,6 @@
 - B-System: `B#ISSUE-14`, `B#PR-15`
 - R-System:
 
-## UPDATE LOG
-- 2026-03-27: P1-D PASS close, move to A performance analysis track.
-- 2026-03-28: Added Entry Cap experiment tracking and Ops Incident recurrence-prevention pointers to SSOT.
-- 2026-03-28: Added B-L2 OBS-only runtime PASS pointer and AM/EOD time-separated evidence pending pointer to SSOT.
-
 ## RULES
 ### Allowed
 - Status summary

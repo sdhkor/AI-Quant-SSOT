@@ -40,9 +40,8 @@
 - 완료 항목: 반드시 Evidence 포인터 포함
 - 진행 중 항목: 포인터가 있으면 함께 표기
 - 포인터가 없으면 완료 표시 금지
-- [ ] A Entry Cap PR 적용 `(A#PR-xx)`
-- [ ] A Entry Cap 1~3일 효과 리포트(Val) `(A#ISSUE-yy)`
-- [ ] Ops Incident 재발방지(원칙 3개) 박제 `(A#ISSUE-zz)`
+- [ ] A Entry Cap 실험 #2(cap=12) blocked evidence 확보 `(A#ISSUE-XX)`
+- [ ] A Entry Cap 실험 #2 효과 판정 정리 `(A#ISSUE-XX)`
 
 ## STATUS
 - intraday_1m DB write path: `PASS 수준`
@@ -51,15 +50,22 @@
 - Ops Incident handling: `SEPARATED`
 - B-L2 OBS-only runtime: `PASS`
 - overall: `IN PROGRESS`
+- A / Entry Cap 실험 #1(cap=20): 구현 PASS, 효과 HOLD로 중간 종료
+  - count 증가 확인
+  - blocked 증거 미확보
+  - 현재 장세에서 검증 효율 낮음
+
+- A / Entry Cap 실험 #2(cap=12): 진행
+  - 목적: blocked 발생 여부 및 거래 억제 실효성 검증
+  - pointer: A#ISSUE-XX / A#PR-9
 
 ## TODAY
 원칙:
 - 완료 항목: 반드시 Evidence 포인터 포함
 - 진행 중 항목: 포인터가 있으면 함께 표기
 - 포인터가 없으면 완료 표시 금지
-- [ ] A Entry Cap PR 적용 `(A#PR-xx)`
-- [ ] A Entry Cap 1~3일 효과 리포트(Val) `(A#ISSUE-yy)`
-- [ ] Ops Incident 재발방지(원칙 3개) 박제 `(A#ISSUE-zz)`
+- [ ] A Entry Cap 실험 #2(cap=12) PR 유지 `(A#PR-9)`
+- [ ] A Entry Cap 실험 #2 효과 리포트(Val) `(A#ISSUE-XX)`
 
 ## TOMORROW
 - [ ] Recheck NOW / NEXT / STATUS
@@ -106,3 +112,4 @@ SSOT Update Log 1줄
 - 2026-03-28: Added Entry Cap experiment tracking and Ops Incident recurrence-prevention pointers to SSOT.
 - 2026-03-28: Added B-L2 OBS-only runtime PASS pointer and AM/EOD time-separated evidence pending pointer to SSOT.
 - 2026-03-30: Recorded B-L2 OBS-only runtime PASS and time-separated AM/EOD evidence completed. A/R escalation remains on hold.
+- 2026-03-31: Closed Entry Cap exp1(cap=20) as implementation PASS / effect HOLD, and moved tracking to exp2(cap=12).

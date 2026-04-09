@@ -16,8 +16,8 @@
 
 ## B 운영 모드 (현재)
 - **1일 2회 단기 실행(오전/마감) 유지**
-  - 오전: 장 시작 후 약 10분 실행
-  - 마감: 장 마감 전/직후 약 10분 실행
+  - 오전: 장 시작 전 preopen truth + 장 시작 직후 refresh
+  - 마감: 장 마감 전/직후 evidence 정리
   - 장중 A는 **읽기 전용(SHADOW)**, 정책 영향 0
 
 ## Architecture (권장)
@@ -27,33 +27,58 @@
 - 구조: **B → A ← R** (단, Kiwoom 세션은 A 단일)
 
 ## NOW
-- B 운영: `1일 2회(오전/마감)` baseline 유지
-- P1-D snapshot freshness (window-based): `DONE`
-- A / Entry Cap 실험 #2(cap=12): `IN PROGRESS`
-- Ops Incident: `SEPARATED / minimal recurrence-prevention principles fixed`
-- B Gate observer-only evidence: `PASS (2026-04-02)`
-- B-L2 runtime runner: `FAIL (Fix needed)`
-- Geo-Industrial Reordering parallel observer-only track: `HOLD`
-- A 적용 / R 승격 / 행동 정책 연결: `보류 유지`
+- A / 1차 단일 변수 테스트: `시가 대비 괴리율 4% 컷`
+- A / 목적: `덜 잃게 하는 필터 유효성 검증`
+- A / tonight hotfix scope fixed:
+  - `timeout -> BLOCK` 연결 끊기
+  - `_daily_ohlc_cache[key] = None` 저장 차단
+  - code version / timestamp / hash 강제 기록
+- A / tomorrow preopen must-have:
+  - canary 1회
+  - WAL 포함 evidence 수집 유지
+- A / this-week separate track:
+  - request_id end-to-end unification
+  - state-cache transition
+  - grace-timeout real use
+  - repeated final-decision suppression
+
+- B / stale structure improved
+- B / same-day truth generation: `NORMAL`
+- B / current focus:
+  - session raw truth separation
+  - ZIP automation criteria
+  - AUX auto-include criteria
+  - B_AM raw-log inclusion
+  - raw-first evidence pack criteria
+  - backlog separation rule
+- B / expansion discussion in recovery-track body: `FORBIDDEN`
 
 ## NEXT
 원칙:
 - 완료 항목: 반드시 Evidence 포인터 포함
 - 진행 중 항목: 포인터가 있으면 함께 표기
 - 포인터가 없으면 완료 표시 금지
-- [ ] A Entry Cap #2(cap=12) 효과 최종 판정 `(A#ISSUE-xx)`
-- [ ] A Entry Cap #2 관련 PR 유지/정리 `(A#PR-9)`
-- [ ] B L2 runtime runner fix evidence `(B#ISSUE-yy)`
-- [ ] Geo parallel observer-only track HOLD 상태 유지 `(B#ISSUE-zz)`
+
+- [ ] A tonight scope ①②③ fixed in SSOT `(A#ISSUE-xx)`
+- [ ] A preopen canary + WAL evidence procedure fixed `(A#ISSUE-yy)`
+- [ ] A this-week structural refactor track separated `(A#ISSUE-zz)`
+
+- [ ] B preopen / refresh / canary wording fixed `(B#ISSUE-aa)`
+- [ ] B session raw truth separation rule fixed `(B#ISSUE-bb)`
+- [ ] B ZIP automation / AUX / raw-first evidence pack rule fixed `(B#ISSUE-cc)`
+- [ ] B backlog separation rule fixed `(B#ISSUE-dd)`
 
 ## STATUS
-- intraday_1m DB write path: `PASS 수준`
-- P1-D snapshot freshness (window-based): `DONE`
-- A Entry Cap #2(cap=12): `구현 PASS / 효과 HOLD`
-- Ops Incident handling: `SEPARATED`
-- B Gate observer-only evidence: `PASS`
-- B-L2 runtime runner: `FAIL (Fix needed)`
-- Geo parallel observer-only track: `HOLD`
+- A / 1차 단일 변수 테스트(4% 컷): `IN PROGRESS`
+- A / tonight hotfix scope: `FIXED`
+- A / preopen canary + WAL evidence: `REQUIRED`
+- A / structural refactor items: `SEPARATE TRACK`
+
+- B / stale structure: `IMPROVED`
+- B / same-day truth generation: `NORMAL`
+- B / evidence pack completion: `IN PROGRESS`
+- B / expansion ideas in recovery-track body: `FORBIDDEN`
+
 - overall: `IN PROGRESS`
 
 ## TODAY
@@ -61,9 +86,14 @@
 - 완료 항목: 반드시 Evidence 포인터 포함
 - 진행 중 항목: 포인터가 있으면 함께 표기
 - 포인터가 없으면 완료 표시 금지
-- [ ] A Entry Cap #2(cap=12) 4/2 관찰 결과 반영 `(A#ISSUE-xx)`
-- [ ] B Gate observer-only PASS / L2 FAIL / Geo HOLD 반영 `(B#ISSUE-yy)`
-- [ ] A/R 연동 및 정책 승격 보류 유지 `(B#ISSUE-zz)`
+
+- [ ] A tonight scope ①②③ fixed `(A#ISSUE-xx)`
+- [ ] A preopen canary + WAL evidence procedure fixed `(A#ISSUE-yy)`
+- [ ] A this-week structural refactor track separated `(A#ISSUE-zz)`
+
+- [ ] B preopen / refresh / canary wording fixed `(B#ISSUE-aa)`
+- [ ] B session raw truth separation rule fixed `(B#ISSUE-bb)`
+- [ ] B ZIP automation / AUX / raw-first evidence pack rule fixed `(B#ISSUE-cc)`
 
 ## TOMORROW
 - [ ] Recheck NOW / NEXT / STATUS
@@ -75,15 +105,15 @@
 - Dashboard: [HQ_DASHBOARD.md](./HQ_DASHBOARD.md)
 
 ### Evidence Pointers
-- A-System: `A#PR-9`, `A#ISSUE-xx`, `A#ISSUE-zz`
-- B-System: `B#ISSUE-14`, `B#PR-15`, `B#ISSUE-yy`, `B#ISSUE-zz`
+- A-System: `A#ISSUE-xx`, `A#ISSUE-yy`, `A#ISSUE-zz`
+- B-System: `B#ISSUE-aa`, `B#ISSUE-bb`, `B#ISSUE-cc`, `B#ISSUE-dd`
 - R-System:
 
 ## RULES
 ### Allowed
 - Status summary
 - Today / Tomorrow checklist
-- System status (✅ / 🟡 / ⛔ or PASS / HOLD / DONE)
+- System status (✅ / 🟡 / ⛔ or PASS / HOLD / DONE / IN PROGRESS)
 - Evidence pointer numbers only
 - Example: `A#PR-12`, `B#ISSUE-7`, `R#PR-3`
 
@@ -97,14 +127,12 @@
 - Private repo links
 - Credential / collaborator / ruleset related content
 
-
 ## UPDATE LOG
 - 2026-03-20: Replaced outdated Gate3a/P2 wording with current A-System P1 intraday fail track. Evidence pointer: A#PR-8, A#ISSUE-xx
 - 2026-03-23: Added P1 intraday_1m FIX/validation pointer checklist to TODAY/NEXT per HQ instruction. Evidence-only update.
 - 2026-03-24: Added constitution-level Operating Order, current B operating mode (Stage A), and recommended architecture to HQ_DASHBOARD. Kept split status and evidence-pointer-only policy.
 - 2026-03-25: Fixed SSOT wording to B daily-two-run mode and P1-D snapshot freshness window-based validation. Evidence-pointer-only update.
 - 2026-03-26: Fixed SSOT to B daily-two-run mode and P1-D window-based validation. Kept evidence-pointer-only policy and split status.
-SSOT Update Log 1줄
 - 2026-03-27: P1-D PASS close, move to A performance analysis track.
 - 2026-03-27: Added B-L2(OBS-only) v0.1 schema/sample and structure-validation checklist to SSOT with evidence pointers only.
 - 2026-03-28: Added Entry Cap experiment tracking and Ops Incident recurrence-prevention pointers to SSOT.
@@ -112,3 +140,7 @@ SSOT Update Log 1줄
 - 2026-03-30: Recorded B-L2 OBS-only runtime PASS and time-separated AM/EOD evidence completed. A/R escalation remains on hold.
 - 2026-03-31: Closed Entry Cap exp1(cap=20) as implementation PASS / effect HOLD, and moved tracking to exp2(cap=12).
 - 2026-04-02: A Entry Cap #2(cap=12) remains implementation PASS / effect HOLD with additional adverse evidence; B Gate observer-only evidence PASS, L2 runtime runner FAIL(Fix needed), Geo parallel observer-only track HOLD.
+- 2026-04-03: A moved from Entry Cap #2 review to two-step fast test (exit first, entry later); B remains stabilization-first with Gate PASS, L2 candidate, Geo #16 HOLD.
+- 2026-04-04: Added A single-variable test tracking for 4% gap-from-open cut with fixed conditions, success criteria, and auto-extension rule.
+- 2026-04-09: Fixed A tonight-scope-only rule and separated this-week structural refactor items into a distinct track.
+- 2026-04-09: Fixed B recording-system priorities around session raw truth, ZIP automation, AUX/raw-first evidence pack, and backlog separation.

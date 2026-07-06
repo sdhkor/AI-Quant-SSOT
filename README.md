@@ -1,3 +1,9 @@
+Canonical Principle
+
+↓
+
+CAPITAL_EVOLUTION_POLICY.md
+
 # AI-Quant-SSOT
 
 Public canonical docs for AI Quant operations.
